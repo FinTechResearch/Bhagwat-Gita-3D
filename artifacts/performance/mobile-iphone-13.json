@@ -1,0 +1,15 @@
+{
+  "domContentLoaded": 1982,
+  "load": 1982.5999999996275,
+  "firstContentfulPaint": 2156,
+  "domNodes": 99,
+  "versePanels": 0,
+  "bodyTextLength": 538,
+  "scrollHeight": 364312,
+  "wallClockMs": 4153,
+  "reader": {
+    "versePanels": 1,
+    "readingColumns": 3,
+    "renderedSearchResults": 0
+  }
+}

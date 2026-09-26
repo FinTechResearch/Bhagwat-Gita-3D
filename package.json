@@ -1,0 +1,47 @@
+{
+  "name": "gita-cosmic-journey",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev_full.mjs",
+    "dev:web": "vite",
+    "dev:full": "node scripts/dev_full.mjs",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b --pretty false",
+    "content:generate": "python3 scripts/generate_content.py",
+    "content:check": "python3 scripts/validate_content.py",
+    "api": "node server/index.mjs",
+    "api:check": "node scripts/check_api.mjs",
+    "tts:check": "node scripts/check_tts.mjs",
+    "a11y:check": "node scripts/a11y_check.mjs",
+    "perf:check": "node scripts/perf_check.mjs",
+    "visual:check": "node scripts/visual_check.mjs",
+    "visual:update": "node scripts/visual_check.mjs --update",
+    "quality:check": "npm run a11y:check && npm run perf:check && npm run visual:check",
+    "check": "npm run content:check && npm run api:check && npm run typecheck && npm run build",
+    "check:offline": "npm run content:check && npm run typecheck && npm run build"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.0.7",
+    "@react-three/fiber": "^9.1.2",
+    "gsap": "^3.13.0",
+    "lucide-react": "^0.511.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "three": "^0.176.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@types/three": "^0.176.0",
+    "@vitejs/plugin-react": "^4.4.1",
+    "axe-core": "^4.13.0",
+    "pixelmatch": "^7.2.0",
+    "playwright": "^1.63.0",
+    "pngjs": "^7.0.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}
